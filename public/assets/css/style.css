@@ -1,0 +1,208 @@
+:root {
+    --primary: #5B21B6;         /* violet-800 */
+    --primary-dark: #2E1065;    /* violet-950 */
+    --secondary: #1E1B4B;      /* violet-950 profundo para navbar */
+    --accent: #10B981;         /* Verde para status/sucesso */
+    --bg-light: #F5F3FF;       /* Fundo suave com tom violeta claríssimo */
+    --text-main: #2E1065;      /* violet-950 para textos principais */
+    --white: #FFFFFF;
+    --danger: #EF4444;
+    --danger-dark: #DC2626;
+    --border: #DDD6FE;        /* Bordas violeta claro (violet-200) */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(46, 16, 101, 0.15);
+}
+
+.navbar .logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #A78BFA; /* violet-400 para destacar */
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.navbar a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: #C4B5FD;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(91, 33, 182, 0.08);
+    padding: 2rem;
+    border: 1px solid var(--border);
+}
+
+/* Títulos */
+h1, h2 {
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background-color: #F3E8FF; /* violet-100 */
+    font-weight: 600;
+    color: var(--primary-dark);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+td {
+    font-size: 0.95rem;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-danger {
+    background-color: var(--danger);
+    color: var(--white);
+}
+
+.btn-danger:hover {
+    background-color: var(--danger-dark);
+}
+
+.btn-sm {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+/* Formulários */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #FAFAFA;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-dark);
+    box-shadow: 0 0 0 3px rgba(91, 33, 182, 0.2);
+    background-color: var(--white);
+}
+
+.alert-success {
+    background-color: #ECFDF5;
+    color: #065F46;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--accent);
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: #F3E8FF;
+    color: var(--primary);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #6B21A8;
+    font-size: 0.85rem;
+    background-color: var(--white);
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+}
